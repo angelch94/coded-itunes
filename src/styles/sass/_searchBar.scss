@@ -1,0 +1,22 @@
+
+.searchBar {
+    @include flex(row, center, center);
+    @include sizing(100%, 50px);
+    .searchBar--input {
+        @include sizing(95%, 100%);
+        background-color: white;
+        color: $secondaryColor;
+        &:hover {
+            background-color: #c8cdd2;
+        }
+    }
+    .searchBar--button {
+        @include sizing(5%, 100%);
+        flex: 1;
+        background-color: $secondaryColor;
+        color: white;
+        &:hover {
+            color: $primaryColor
+        }
+    }
+}

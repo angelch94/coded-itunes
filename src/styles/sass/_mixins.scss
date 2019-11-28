@@ -1,0 +1,27 @@
+@mixin flex ($direction, $justify, $align) {
+    display: flex;
+    justify-content:$justify;
+    align-items: $align;
+    flex-direction: $direction
+}
+
+@mixin sizing ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin borders ($style, $width, $radius, $color) {
+    border-radius: $radius;
+    border-color: $color;
+    border-width: $width;
+    border-style: $style;
+}
+
+@mixin margin-paddding ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+@mixin backgrounds ($size) {
+    backgound-size: $size;
+}

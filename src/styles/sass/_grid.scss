@@ -1,0 +1,50 @@
+.grid-container {
+    position:relative;
+    display: grid;
+    grid-gap: 1rem;
+    background-color: black;
+    @include margin-paddding(0px, 25px);
+    .grid--announce {
+        @include flex(row, center, center);
+        color: white;
+    }
+    .grid-item {
+        @include flex (column, center, center);
+        @include borders(solid, 3px, 15px, white);
+        @include sizing(100%, 100%);
+        background-color: white;
+        color: black;
+        .grid-item--artwork {
+            flex: 1
+        }
+        .grid-item--artistname {
+            flex: 1
+        }
+        .grid-item--collectionname {
+            flex: 1
+        }
+        .grid-item--bookmarksbutton {
+            @include sizing(80%, 5px);
+            @include borders(solid, 1px, 15px, $primaryColor);
+            @include flex (row, center, center);
+            padding: 15px
+        }
+    }
+  }
+
+  .horizontal {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .vertical {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .remove {
+      background-color: $primaryColor;
+      color: white
+  }
+
+  .add {
+      background-color: $secondaryColor
+  }
