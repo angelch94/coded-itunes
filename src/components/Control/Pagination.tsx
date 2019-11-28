@@ -4,7 +4,7 @@ import { ArrowBack, ArrowForward } from "@material-ui/icons"
 
 export const Pagination = ({ limit, albums, handleNextPagination, handlePreviousPagination, currentPage }: IPagination) => 
     <div className="pagination--container">
-        {currentPage == 1 ?
+        {currentPage === 1 ?
             <ArrowBack className="primaryColor" /> :
             <ArrowBack className="secondaryColor" onClick={(e) => handlePreviousPagination(e)}/>
         }

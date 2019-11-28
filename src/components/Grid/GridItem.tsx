@@ -18,8 +18,8 @@ export const GridItem = ({ bookmarks, album, handleAddToBookmarks }: IGridItem) 
             <div className="grid-item--artistName">{album.artistName}</div>
             <div className="grid-item--collectionname">{album.collectionName}</div>
             {!bookmarks.includes(album) ? 
-                <a className="grid-item--bookmarksbutton add" onClick={() => handleAddToBookmarks(album)}>Add to bookmarks</a> :
-                <a className="grid-item--bookmarksbutton remove" onClick={() => handleAddToBookmarks(album)}>Remove bookmarks</a>}
+                <button className="grid-item--bookmarksbutton add" onClick={() => handleAddToBookmarks(album)}>Add to bookmarks</button> :
+                <button className="grid-item--bookmarksbutton remove" onClick={() => handleAddToBookmarks(album)}>Remove bookmarks</button>}
         </div>
     </animated.div>
 }
